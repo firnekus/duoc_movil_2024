@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="center-container">
+    <div class="ion-padding-vertical">
+
+
+      <ion-card class="ion-text-center">
+        
+        <img alt="DUOC" src="../../../assets/img/pao.jpg" class="foto-portada" />
+      
+        <ion-card-content>
+
+          <ion-card-header>
+            
+            <ion-toolbar>
+              <h1 style="font-family: Merriweather">Sistema de Asistencia DUOC</h1>
+              <br>
+              <h2 style="font-family: Merriweather">Inicio de sesión</h2>
+            </ion-toolbar>
+          </ion-card-header>
+
+          <ion-item class="floating-label">
+            <ion-label style="font-family: Lato" position="floating">Correo</ion-label>
+            <ion-input style="font-family: Lato" [(ngModel)]="usuario.cuenta" type="text"></ion-input>
+          </ion-item>
+          <ion-item class="floating-label">
+            <ion-label style="font-family: Lato" position="floating">Contraseña</ion-label>
+            <ion-input style="font-family: Lato" [(ngModel)]="usuario.password" type="password"></ion-input>
+          </ion-item>
+          <ion-grid>
+            <div class="ion-margin-top">
+              <ion-button style="font-family: Noto Sans" shape="round" size="small" (click)="ingresar()" class="ancho-boton">
+                Ingresar
+              </ion-button>
+              <ion-button style="font-family: Noto Sans" shape="round" id="recuperar" (click)="redirigir()" size="small" class="ancho-boton">
+                ¿Olvidaste tu Contraseña?
+              </ion-button>
+              <ion-button  shape="round" size="small" class="ancho-boton">
+                Crea tu cuenta
+              </ion-button>
+            </div>
+          </ion-grid>
+        </ion-card-content>
+
+      </ion-card>
+
+    </div>
+  </div>
+</ion-content>

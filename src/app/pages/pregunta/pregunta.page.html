@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>pregunta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="center-container">
+    <div class="ion-padding-vertical">
+
+      <ion-card class="ion-text-center">
+            
+        <ion-card-content>
+
+          <ion-card-header>
+            
+            <ion-toolbar>
+              <h1 style="font-family: Merriweather">Recuperación de Contraseña</h1>
+            </ion-toolbar>
+          </ion-card-header>
+
+          <ion-item style="font-family: Lato" class="floating-label">
+            {{usuario?.preguntaSecreta}}
+          </ion-item>
+          <ion-input [(ngModel)]="respuesta" type="text"></ion-input>
+
+          <ion-grid>
+            <div class="ion-margin-top">
+              <ion-button style="font-family: Noto Sans"  shape="round" size="small" (click)="validarRespuesta()" class="ancho-boton">
+                Recuperar
+              </ion-button>
+            </div>
+          </ion-grid>
+        </ion-card-content>
+
+      </ion-card>
+
+    </div>
+  </div>
+</ion-content>

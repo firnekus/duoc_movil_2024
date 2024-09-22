@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navegar('/login')">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card class="pepito">
+    <ion-card-content style="font-family: Noto Sans; font-size:x-large">
+      ¡Bienvenido a nuestra aplicación!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card (click)="navegar('/inicio')">
+          <ion-card-title style="font-family: Merriweather">Asistencia</ion-card-title>
+          <ion-card-content style="font-family: Lato">
+            Escanea este QR para estar presente en tu clase
+          </ion-card-content>
+        </ion-card>
+        
+      </ion-col>
+      <ion-col size="6">
+        <ion-card routerLink="/materias">
+          <ion-card-title style="font-family: Merriweather" >Materias</ion-card-title>
+          <ion-card-content style="font-family: Lato">
+            Aquí puedes ver qué materias estás cursando
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

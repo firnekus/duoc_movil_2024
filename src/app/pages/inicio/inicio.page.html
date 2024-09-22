@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="azulduoc">
+    <ion-title #titulo size="large">
+      Sistema de Asistencia DUOC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="centrar">
+    <div class="enmarcar ion-text-center" #page>
+
+      <ion-toolbar class="ion-padding-top">
+        <h1 *ngIf="usuario.cuenta.trim() !== ''">
+          ¡Bienvenido(a) 
+          {{ usuario.nombre }} 
+          {{ usuario.apellido }}!
+        </h1>
+        <h1 *ngIf="usuario.cuenta.trim() === ''">
+          Para usar el sistema debe llenar sus datos
+        </h1>
+
+        <h2>
+          Para entrar a la clase, por favor revise abajo.
+        </h2>
+      </ion-toolbar>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="amarilloduoc" class="ion-text-center">
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/perfil')">
+      <ion-icon slot="start" name="home"></ion-icon>
+      Inicio
+    </ion-button>
+
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/misdatos')">
+      <ion-icon slot="start" name="home"></ion-icon>
+      Mis Datos
+    </ion-button>
+    
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/leerqr')"
+      [disabled]="usuario.cuenta.trim() === ''">
+      <ion-icon slot="start" name="qr-code"></ion-icon>
+      Asistencia
+    </ion-button>
+
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/login')">
+      <ion-icon slot="start" name="log-out"></ion-icon>
+      Salir
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

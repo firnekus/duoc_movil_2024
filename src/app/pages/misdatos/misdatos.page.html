@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>misdatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">misdatos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card class="ion-text-center">
+    <ion-card-header>
+      <ion-card-title>Información Personal</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="table-container">
+        <table>
+          <tbody>
+            <tr>
+              <td style="font-family: Merriweather">Nombre</td>
+              <td style="font-family: Lato"> {{ usuario!.nombre }}</td>
+            </tr>
+            <tr>
+              <td style="font-family: Merriweather">Apellido Paterno</td>
+              <td style="font-family: Lato"> {{ usuario!.apellido }}</td>
+            </tr>
+            <tr>
+              <td style="font-family: Merriweather">Correo</td>
+              <td style="font-family: Lato"> {{ usuario!.correo }}</td>
+            </tr>
+            <tr>
+              <td style="font-family: Merriweather">Nombre Cuenta</td>
+              <td style="font-family: Lato"> {{ usuario!.cuenta }}</td>
+            </tr>
+            <tr>
+              <td style="font-family: Merriweather">Nivel Educacional</td>
+              <td style="font-family: Lato"> {{ usuario!.nivelEducacional.nombre }}</td>
+            </tr>
+            <tr>
+              <td style="font-family: Merriweather">Pregunta Secreta</td>
+              <td style="font-family: Lato"> {{ usuario!.preguntaSecreta }}</td>
+            </tr>
+            <tr>
+              <td style="font-family: Merriweather">Respuesta a Pregunta</td>
+              <td style="font-family: Lato"> {{ usuario!.respuestaSecreta }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="warning" class="ion-text-center">
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/perfil')">
+      <ion-icon slot="start" name="home"></ion-icon>
+      Inicio
+    </ion-button>
+
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/misdatos')">
+      <ion-icon slot="start" name="home"></ion-icon>
+      Mis Datos
+    </ion-button>
+    
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/leerqr')"
+      [disabled]="usuario!.cuenta.trim() === ''">
+      <ion-icon slot="start" name="qr-code"></ion-icon>
+      Asistencia
+    </ion-button>
+
+    <ion-button shape="round" size="small" class="navy-button"
+      (click)="navegar('/login')">
+      <ion-icon slot="start" name="log-out"></ion-icon>
+      Salir
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

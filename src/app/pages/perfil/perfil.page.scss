@@ -1,0 +1,35 @@
+ion-card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #F7E300;
+  text-align: center; 
+}
+
+ion-card-title {
+  text-align: center; 
+}
+
+ion-card-content {
+  text-align: center; 
+}
+
+ion-button {
+  --border-radius: 0;
+  --background: transparent;
+  --box-shadow: none;
+  --inner-shadow: none;
+}
+
+.pepito {
+  background-color: #ffff2a; 
+  border-radius: 8px;      
+  padding: 16px;       
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.pepito ion-card-title, .pepito ion-card-content {
+  color: #333333; 
+}
+
+

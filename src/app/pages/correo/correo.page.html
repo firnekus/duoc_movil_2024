@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>correo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center-container">
+    <div class="ion-padding-vertical">
+      <ion-card class="ion-text-center">  
+        <ion-card-content>
+          <ion-card-header>
+            <ion-toolbar>
+              <h1 style="font-family: Merriweather">Recuperación de Contraseña</h1>
+            </ion-toolbar>
+          </ion-card-header>
+
+          <ion-item class="floating-label">
+            <ion-label style="font-family: Lato" position="floating">Nombre de Cuenta</ion-label>
+            <ion-input [(ngModel)]="correo" type="text"></ion-input>
+          </ion-item>
+
+          <ion-grid>
+            <div class="ion-margin-top">
+              <ion-button style="font-family: Noto Sans" shape="round" size="small" (click)="redirigir()" class="ancho-boton">
+                Recuperar
+              </ion-button>
+            </div>
+          </ion-grid>
+        </ion-card-content>
+
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
